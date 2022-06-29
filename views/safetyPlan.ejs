@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Form table</title>
+
+
+    <style>
+        .form-heading h1 {
+            margin-top: 10px;
+            font-size: 5mm;
+            text-align: center;
+            color: #353192;
+        }
+
+        .form-heading hr {
+            background: #0068aa;
+            height: 1px;
+        }
+
+        .table-form1 {
+            padding: 15px;
+        }
+
+        input.form-control {
+            border: 0px;
+            border-bottom: 1px solid #ced4da;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .form-group.form-inputfiled {
+            display: flex;
+            align-items: flex-end;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .form-group.form-inputfiled span {
+            float: left;
+        }
+
+        .steps-field {
+            padding: 4mm;
+            background-color: #a4b6d8;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .steps-field h1 {
+            font-size: 3mm;
+            margin-bottom: 0px;
+            margin-top: 2px;
+            float: left;
+        }
+
+        .steps-field h2 {
+            font-size: 3mm;
+            margin-left: 20px;
+            margin-top: 2px;
+        }
+
+        label span {
+            margin-right: 12px;
+        }
+
+
+        label.clinical-width {
+            width: 38%;
+        }
+
+        label.clinical-widths {
+            width: 29%;
+        }
+
+        label.clinical-widthss {
+            width: 65%;
+        }
+
+        h4 {
+            margin: 20px;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        span {
+            font-size: 3mm;
+        }
+
+        p {
+            font-size: 3mm;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .form-heading h1 {
+                font-size: 18px;
+            }
+
+            .steps-field h1 {
+                font-size: 10px;
+            }
+
+            .steps-field h2 {
+                font-size: 7px;
+                margin-left: 16mm;
+                margin-top: 2px;
+            }
+
+            label {
+                font-size: 10px;
+                margin-bottom: 0px;
+            }
+
+            .form-heading {
+                padding: 5px;
+                padding-top: 10px;
+            }
+
+            h4 {
+                font-size: 8px;
+            }
+
+            h5.ml-3.mt-3 {
+                font-size: 10px;
+            }
+
+            .steps-field {
+                padding: 8px;
+                margin-bottom: 8px;
+            }
+
+            input.form-control {
+                height: 25px;
+                margin-right: 10px;
+            }
+        }
+
+        @media only screen and (min-width:768px) and (max-width:1024px) {
+
+            .steps-field h2 {
+                font-size: 18px;
+                margin-left: 25px;
+                margin-top: 3px;
+            }
+
+            .steps-field h1 {
+                font-size: 20px;
+            }
+
+            label.clinical-widths {
+                width: 80%;
+
+            }
+
+            label {
+                margin-bottom: 0px;
+            }
+
+            h5.ml-3.mt-3 {
+                font-size: 3mm;
+            }
+
+        }
+
+        section#forms {
+            margin-left: 0px;
+        }
+
+        .col-md-12 {
+            max-width: 62% !important;
+        }
+
+        h5.ml-3.mt-3 {
+            font-size: 3mm;
+        }
+
+        h4 {
+            font-size: 3mm;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="forms">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-heading">
+                        <h1>
+                            Pateint Safety plan template
+                        </h1>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-12 ">
+
+                    <div class="table-form1">
+                        <div class="steps-field">
+                            <h1>
+                                Steps1:
+                            </h1>
+
+                            <h2>
+                                &nbsp; &nbsp;Warnings signs(thoughts,images,mood,situation,behaviour)that a crisis may
+                                be <br>
+                                developing
+                            </h2>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span>1 &nbsp;</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;<%= info.step1.point %>
+                            </p>
+                        </div>
+                        <!-- <div class="form-group form-inputfiled">
+                            <label>2.</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <label>3.</label>
+                            <input type="text" class="form-control">
+                        </div> -->
+                    </div>
+                    <div class="table-form1">
+                        <div class="steps-field">
+                            <h1>
+                                Steps2:
+                            </h1>
+                            <h2>
+                                &nbsp; &nbsp;Internal copies stragegies- Things I can do to take my minf off my problems
+                                <br>
+                                without contacting another person (relaxation technique,physical activity):
+                            </h2>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span>1 &nbsp;</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp; &nbsp;<%= info.step2.point %>
+                            </p>
+                        </div>
+                        <!-- <div class="form-group form-inputfiled">
+                            <label>2.</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-responsevicegroup form-inputfiled">
+                            <label>3.</label>
+                            <input type="text" class="form-control">
+                        </div> -->
+
+                    </div>
+
+                    <div class="table-form1">
+                        <div class="steps-field">
+                            <h1>
+                                Steps3:
+                            </h1>
+                            <h2>
+                                &nbsp; &nbsp;People and social activity that provide distraction:
+                            </h2>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span>1. &nbsp;Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp; <%= info.step3.name %>
+                                </p>
+                            </div>
+
+                            <div>
+                                <span>Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step3.contactNo %>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span>2.&nbsp;Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step3.name1 %>
+                                </p>
+                            </div>
+
+                            <div>
+                                <span> Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step3.contactNo1 %>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span>3.&nbsp;Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step3.place %>
+                                </p>
+                            </div>
+                            <div>
+
+
+                                <span>Place</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp; <%= info.step3.place1 %>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="table-form1">
+                        <div class="steps-field">
+                            <h1>
+                                Steps4:
+                            </h1>
+                            <h2>
+                                &nbsp; &nbsp;People whom i can ask for help:
+                            </h2>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span>1.&nbsp;Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step4.name %>
+                                </p>
+                            </div>
+                            <div>
+                                <span>Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step4.contactNo %>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span>2.&nbsp;Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step4.name1 %>
+                                </p>
+                            </div>
+                            <div>
+                                <span>Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step4.contactNo1 %>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span>3.&nbsp;Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step4.name2 %>
+                                </p>
+                            </div>
+                            <div>
+                                <span>Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step4.contactNo2 %>
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="table-form1 mt-3">
+                        <div class="steps-field">
+                            <h1>
+                                Steps5:
+                            </h1>
+                            <h2>
+                                &nbsp; &nbsp;Profesionals or agencies I can contact during the crisis:
+                            </h2>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span class="clinical-widths">1.&nbsp;Clinical Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step5.clinicianName %>
+                                </p>
+                            </div>
+                            <div>
+                                <span>Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step5.contactNo %>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span class="clinical-width">Clinical Paper and Emergency Contact#</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;<%= info.step5.emergencContact %>
+                            </p>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <div style="float:left; width:50%;">
+                                <span class="clinical-widths">2.&nbsp;Clinical Name</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;&nbsp;<%= info.step5.clinicianName1 %>
+                                </p>
+                            </div>
+                            <div>
+                                <span>Phone</span>
+                                <p style="border-bottom: 1px solid #000;">
+                                    &nbsp;<%= info.step5.contactNo1 %>
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span class="clinical-width">Clinical Paper and Emergency Contact#</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;<%= info.step5.emergencContact1 %>
+                            </p>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span class="clinical-widths">3.&nbsp;Local Urgent care services</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;<%= info.step5.localUrgentCareService %>
+                            </p>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span class="clinical-width">Urgent care services Address</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp; <%= info.step5.urgentCareServiceAddress %>
+                            </p>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span class="clinical-width">Local Urgent care phone</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp; <%= info.step5.urgentCareServicePhone %>
+                            </p>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span class="clinical-widths">4.&nbsp;Suicide Prevention Lifeline</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;<%= info.step6.point %>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="table-form1">
+                        <div class="steps-field">
+                            <h1>
+                                Steps6:
+                            </h1>
+                            <h2>
+                                &nbsp; &nbsp; Making the environment safe:
+                            </h2>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span>1.</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;<%= info.step7.makingTheEnvironmentSafe %>
+                            </p>
+                        </div>
+                        <div class="form-group form-inputfiled">
+                            <span>2.</span>
+                            <p style="border-bottom: 1px solid #000;">
+                                &nbsp;&nbsp;
+                            </p>
+                        </div>
+
+                        <h4>
+                            Safety Plan Template @2008 Barbara Stanley and Gregory k.Brown is reprinted with express
+                            permission of the authorz.No portion of the safety plan template may be reproduced <br>
+                            without their express ,written permission.you can contact the authorz @bhz@columboia.com
+                        </h4>
+
+                    </div>
+
+                    <h5 class="ml-3 mt-3">
+                        the one thing that is most important for me and worth living for is:
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

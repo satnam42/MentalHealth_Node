@@ -1,0 +1,106 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        table {
+            margin-left: 20px;
+            width: 55%;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+        }
+
+        th {
+            text-align: left;
+        }
+
+        .table-1 tr td:first-child {
+            width: 26%;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        td:first-child {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="m-5">
+            <div class="row mx-auto">
+                <div class="col-3">
+                    <div class="form-group table-inputfiled w-100">
+                        <label>
+                            Name
+                        </label>
+                        <p class="form-control">
+                            <%= info[0].name %>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group table-inputfiled w-100">
+                        <label>Date</label>
+                        <p class="form-control">
+                            <%= info[0].today %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <% for (var day of info) { %>
+            <table>
+                <tr>
+                    <th>
+                        <%= day.category %>
+                    </th>
+                    <td>Sun</td>
+                    <td>Mon</td>
+                    <td>Tues</td>
+                    <td>Wed</td>
+                    <td>Thur</td>
+                    <td>Fri</td>
+                    <td>Sat</td>
+                </tr>
+
+                <% for (var i in day.days) { %>
+                    <tr>
+                        <td>
+                            <%= i %>
+                        </td>
+                        <% for (var item of day.days[i]) { %>
+                            <td>
+                                <%= item.no %>
+                            </td>
+                            <% } %>
+                    </tr>
+                    <% } %>
+            </table>
+            <div style="font-size: 12px;" class="my-5">
+                <span class="ml-4"><b>0.No Feeling</b></span>
+                <span class="ml-4"><b>1.A little</b></span>
+                <span class="ml-4"><b>2.Moderate Amount</b></span>
+                <span class="ml-4"><b>3.Strong</b></span>
+                <span class="ml-4"><b>4.Very Strong</b></span>
+            </div>
+            <% } %>
+    </div>
+</body>
+
+</html>
